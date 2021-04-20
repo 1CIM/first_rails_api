@@ -10,6 +10,7 @@ class Api::ArticlesController < ApplicationController
     render json: { article: article }, status: 200
   end
 
+  # RecordNotFound is raised when ActiveRecord cannot find record by given id or set of ids
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
   def not_found
