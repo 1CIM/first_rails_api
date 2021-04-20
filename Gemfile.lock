@@ -97,16 +97,10 @@ GEM
     marcel (1.0.1)
     method_source (1.0.0)
     mini_mime (1.0.3)
-    mini_portile2 (2.5.0)
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
-    nokogiri (1.11.3)
-      mini_portile2 (~> 2.5.0)
-      racc (~> 1.4)
     nokogiri (1.11.3-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.11.3-x86_64-darwin)
       racc (~> 1.4)
     pg (1.2.3)
     pry (0.14.1)
@@ -199,8 +193,6 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
-  ruby
-  x86_64-darwin-20
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
@@ -217,7 +209,7 @@ DEPENDENCIES
   spring
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 3.0.0p0
 
 BUNDLED WITH
-   1.17.3
+   2.2.15
