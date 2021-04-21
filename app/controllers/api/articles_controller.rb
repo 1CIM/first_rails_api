@@ -2,7 +2,6 @@ class Api::ArticlesController < ApplicationController
   def index
     articles = Article.all
     render json: { articles: articles }
-    binding.pry
   end
 
   def show
