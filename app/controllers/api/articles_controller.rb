@@ -15,4 +15,13 @@ class Api::ArticlesController < ApplicationController
   def not_found
     render json: { message: 'Unfortunately we can not find the article you are looking for.' }, status: 404
   end
+
+    def create
+    article = Article.create(params[:article].permit(:title, :body))
+    if article.persisted?
+    render json: { message: 'Your article was successfully created' }, status: 201
+    else
+      render json: { message: article.errors.full_messages.to_sentence }, status: 422
+    end
+  end
 end
