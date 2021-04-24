@@ -2,7 +2,7 @@ RSpec.describe "PUT /api/articles/:id", type: :request do
   let!(:article) { create(:article, title: 'old title', body: 'old body') }
   describe "the happy path" do
     before do
-      put '/api/articles/#{article.id}', params: {
+      put "/api/articles/#{article.id}", params: {
       article: {
          title: 'updeted title', 
          body: 'updated body' 
