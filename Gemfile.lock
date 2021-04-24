@@ -102,6 +102,8 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.3-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.11.3-x86_64-darwin)
+      racc (~> 1.4)
     pg (1.2.3)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -193,6 +195,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  x86_64-darwin-20
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
@@ -212,4 +215,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.15
+   2.2.16
