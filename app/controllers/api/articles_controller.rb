@@ -24,4 +24,6 @@ class Api::ArticlesController < ApplicationController
       render json: { message: article.errors.full_messages.to_sentence }, status: 422
     end
   end
+
+  
 end

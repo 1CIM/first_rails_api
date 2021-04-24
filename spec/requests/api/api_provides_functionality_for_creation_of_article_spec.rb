@@ -1,8 +1,8 @@
 RSpec.describe "POST /api/articles", type: :request do
 
   describe "the happy path" do
-     before do
-    post '/api/articles', params: {
+    before do
+      post '/api/articles', params: {
       article: {
          title: 'Not so fun with Node', 
          body: 'Is is a configuration hell' 
