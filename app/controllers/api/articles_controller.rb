@@ -26,12 +26,9 @@ class Api::ArticlesController < ApplicationController
   end
 
   def update
-    article = Article.find_by(params['id'])
+    article = Article.find(params['id'])
     article.update(title: params[:article][:title], body: params[:article][:body])
-  if article.persisted?
-    render json: { message: 'Your article was successfully updated' }, status:204
-  else
-    render json: { message: article.errors.full_messages.to_sentence }, status: 422
+    article.persisted?
+    render json: { article: article, message: 'Your article was successfully updated' }, status:202
   end
-end
 end

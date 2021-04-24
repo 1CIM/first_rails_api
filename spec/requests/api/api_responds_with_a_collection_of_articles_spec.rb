@@ -13,11 +13,11 @@ RSpec.describe 'GET /api/articles', type: :request do
     end
 
     it 'is expected to return all articles' do
-      expect(JSON.parse(response.body)['articles'].count).to eq 3
+      expect(response_json['articles'].count).to eq 3
     end
 
     it 'is expected to return articles titles' do
-      expect(JSON.parse(response.body)['articles'].first['title']).to eq 'This is an awesome title'
+      expect(response_json['articles'].first['title']).to eq 'This is an awesome title'
     end
   end
 end

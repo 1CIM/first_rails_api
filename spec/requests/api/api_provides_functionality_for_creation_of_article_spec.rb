@@ -15,7 +15,7 @@ RSpec.describe "POST /api/articles", type: :request do
   end
 
   it 'is expected to respond with success message' do
-    expect(JSON.parse(response.body)['message']).to eq 'Your article was successfully created'
+    expect(response_json['message']).to eq 'Your article was successfully created'
   end
   end
 
@@ -34,7 +34,7 @@ RSpec.describe "POST /api/articles", type: :request do
     end
 
     it 'is expected to respond with an error message' do
-      expect(JSON.parse(response.body)['message']).to eq 'Title can\'t be blank'
+      expect(response_json['message']).to eq 'Title can\'t be blank'
     end
   end
 end
