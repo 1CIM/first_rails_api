@@ -24,7 +24,7 @@ RSpec.describe 'POST /api/auth', type: :request do
         params: {
           email: 'my@email.com',
           password: 'password',
-          password_confirmation: 'porr'
+          password_confirmation: 'wrong_pw'
         }
     end
     
@@ -33,7 +33,6 @@ RSpec.describe 'POST /api/auth', type: :request do
     end
 
     it 'returns the expected response' do
-      binding.pry
       expect(response_json['errors']['password_confirmation'].first).to eq "doesn't match Password"
     end
   end
