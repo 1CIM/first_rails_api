@@ -1,7 +1,8 @@
 RSpec.describe "POST /api/articles", type: :request do
 let(:user) { create(:user)}
 let(:user_credentials) { user.create_new_auth_token}
-  describe "the happy path" do
+
+  describe "successfully creates new article" do
     before do
       post '/api/articles', params: {
       article: {
@@ -21,9 +22,7 @@ let(:user_credentials) { user.create_new_auth_token}
     end
   end
 
-  
-
-  describe "the sad path" do
+  describe "is unsuccessfull to create without a title" do
     before do
       post '/api/articles', params: {
         article: {
@@ -43,7 +42,7 @@ let(:user_credentials) { user.create_new_auth_token}
     end
   end
  
-  describe "user not signed in" do
+  describe "unsuccesfull to create article if user is not signed in" do
     before do
       post '/api/articles', params: {
         article: {

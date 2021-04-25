@@ -3,7 +3,7 @@ RSpec.describe 'GET /api/articles', type: :request do
   let!(:article_2_3) { 2.times { create(:article) } }
 
 
-  describe 'successfully' do
+  describe 'successfully gets the articles' do
     before do
       get '/api/articles'
     end
